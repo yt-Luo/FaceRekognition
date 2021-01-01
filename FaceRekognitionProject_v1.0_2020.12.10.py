@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Dec 10 12:59:07 2020
-
+v1_2020.12.10:
+可辨識成功，並紀錄簽到時間
 @author: Acer
 """
 
