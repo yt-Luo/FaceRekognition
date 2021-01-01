@@ -7,42 +7,6 @@
 '''臉部辨識簽到退
 功能: 比對本地照片與s3照片集合，確認是否有此人存在，並紀錄簽到退時間
 
-v1_2020.12.10:
-可辨識成功，並紀錄簽到時間
-?1.若S3 folder name中有中文或符號會導致index_face()出現error --> 限制資料夾輸入
-OK-?2.只能從s3新增folder --> v2已新增本地加入功能
-
-v2.0_2020.12.11: 
-將功能拆分到不同fct()，刪除沒用到的code
-新增menu、簽到、簽退、由本地新增使用者選項
-將辨識成功的照片上傳S3
-
-v2.1.0_2020.12.11:
-修正2.0不能執行的錯誤
-標註姓名須為英文
-OK-?有opencv的error "[WARN:0] terminating async callback" --> camera加入cv2.CAP_DSHOW
-
-v2.1.1_202012.14:
-add_new_user確認:學號限制數字、姓名限定字母
-OK-?camera加入cv2.CAP_DSHOW確認opencv的error是否消失
-?如果新增到s3的照片沒有人臉，有IndexError
-
-v2.2.0_2020.12.14: 待修正 退回上一版
-上傳S3後刪除本地照片
-?sign迴圈簽到成功後會出現'No face detected' --> upload()裡的os.remove造成 
-簽到退時配對失敗可選新增資料或重新比對
-?簽到後直接新增會多RUN一個loop -->待修正
-
-Future Work:
-OK~由本地新增使用者而不是s3
-OK~加入簽退功能
-?上傳後刪除本地照片
-?簽到後直接問要不要新增USER
-?建立dict或array紀錄並輸出資料
-?用檔案導入學生資料和上課時刻表，計算遲到
-?session time過期時可以提醒輸入
-
-@author: ytLuo 2020.12.14
 '''
 # In[ ]:
 
