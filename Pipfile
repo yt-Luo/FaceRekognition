@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "*"
+numpy = "==1.19.3"
+pillow = "*"
+pyttsx3 = "*"
+opencv-python = "*"
+stdiomask = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
